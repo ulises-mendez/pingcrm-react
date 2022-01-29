@@ -58,7 +58,7 @@ export default () => {
   return (
     <div>
       {flash.success && visible && (
-        <div className="mb-8 flex items-center justify-between bg-green-500 rounded max-w-3xl">
+        <div className="mb-8 fixed flex items-center justify-between bg-green-500 right-3 rounded max-w-3xl top-3 z-10">
           <div className="flex items-center">
             <IconSuccess />
             <div className="py-4 text-white text-sm font-medium">
@@ -69,12 +69,12 @@ export default () => {
         </div>
       )}
       {(flash.error || numOfErrors > 0) && visible && (
-        <div className="mb-8 flex items-center justify-between bg-red-500 rounded max-w-3xl">
+        <div className="bg-red-500 fixed flex items-center justify-between max-w-3xl mb-8 right-3 rounded top-3 z-10">
           <div className="flex items-center">
             <IconDanger />
             <div className="py-4 text-white text-sm font-medium">
               {flash.error && flash.error}
-              {numOfErrors === 1 && 'There is one form error'}
+              {numOfErrors === 1 && 'Hay un error en tu solicitud'}
               {numOfErrors > 1 && `There are ${numOfErrors} form errors.`}
             </div>
           </div>

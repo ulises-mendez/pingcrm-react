@@ -11,6 +11,7 @@ const Index = () => {
     data,
     meta: { links }
   } = organizations;
+  console.log(organizations);
   return (
     <div>
       <h1 className="mb-8 text-3xl font-bold">Organizations</h1>

@@ -4,6 +4,13 @@ const path = require('path');
 // THIS IS A TEMPORARY SOLUTION.
 const { hmrOptions, devServer } = require('./webpack.fix');
 
+
+mix.browserSync({
+  proxy: 'http://127.0.0.1:8000',
+  host: 'inertia.test',
+  open:false,
+});
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -39,3 +46,4 @@ mix
   })
   .version()
   .sourceMaps();
+

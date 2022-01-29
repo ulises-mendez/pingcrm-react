@@ -44,6 +44,8 @@ class HandleInertiaRequests extends Middleware
                     'user' => Auth::check() ? new UserResource(Auth::user()->load('account')) : null
                 ];
             },
+            'mensual' => 18,
+            'anual' => 24,
             'flash' => function () use ($request) {
                 return [
                     'success' => $request->session()->get('success'),

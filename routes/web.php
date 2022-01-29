@@ -52,6 +52,10 @@ Route::put('contacts/{contact}/restore')->name('contacts.restore')->uses('Contac
 // Reports
 Route::get('reports')->name('reports')->uses('ReportsController')->middleware('auth');
 
+// Post
+Route::resource('posts', PostController::class)->middleware('auth');
+Route::resource('portfolio', PortfolioController::class);
+
 // 500 error
 Route::get('500', function () {
     echo $fail;
